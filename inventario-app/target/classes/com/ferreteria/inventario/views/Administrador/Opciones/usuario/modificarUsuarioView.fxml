@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="346.0" prefWidth="631.0" style="-fx-background-color: ffffbf;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ferreteria.inventario.controllers.modificarUsuarioController">
+   <children>
+      <GridPane prefHeight="212.0" prefWidth="631.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="317.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="333.0" minWidth="10.0" prefWidth="314.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Rut:">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Nombre: " GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Usuario:" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Apellido:" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="txtRut" minWidth="20.0" prefHeight="25.0" prefWidth="244.0" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="10.0" right="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtUsuario" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="20.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtNombre" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" right="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtApellido" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="20.0" right="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Correo" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="txtCorreo" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="10.0" right="50.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Contraseña" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets left="25.0" />
+               </GridPane.margin>
+            </Label>
+            <PasswordField fx:id="txtContraseña" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="20.0" right="10.0" />
+               </GridPane.margin>
+            </PasswordField>
+         </children>
+      </GridPane>
+      <HBox alignment="CENTER" prefHeight="83.0" prefWidth="631.0">
+         <children>
+            <Label text="Rol:">
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="cmbRol" prefHeight="25.0" prefWidth="179.0">
+               <padding>
+                  <Insets left="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="60.0" />
+               </HBox.margin>
+            </ComboBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="38.0" prefWidth="631.0">
+         <children>
+            <Button onAction="#cancelar" fx:id="btnCancelar" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="CANCELAR">
+               <HBox.margin>
+                  <Insets right="150.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAgregar" mnemonicParsing="false" onAction="#modificarUsuario" prefHeight="40.0" prefWidth="100.0" text="CONFIRMAR">
+               <HBox.margin>
+                  <Insets left="150.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

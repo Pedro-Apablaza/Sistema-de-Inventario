@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox fx:id="VboxMenuInicio" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" styleClass="v" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ferreteria.inventario.controllers.menuController">
+    <children>
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="303.0" prefWidth="532.0" style="-fx-background-color: ffffbf;" VBox.vgrow="ALWAYS">
+            <children>
+                <ImageView fitHeight="178.0" fitWidth="189.0" layoutX="451.0">
+                    <image>
+                        <Image url="@../../../LogoEmpresaSinFondo-transformed.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="9.0" layoutY="23.0" text="Nombre Usuario:">
+                    <font>
+                        <Font name="Franklin Gothic Medium Italic" size="17.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblNombreUsuario" layoutX="140.0" layoutY="21.0" text="Nombre">
+                    <font>
+                        <Font name="Franklin Gothic Medium Italic" size="20.0" />
+                    </font>
+                </Label>
+                <Label layoutX="10.0" layoutY="67.0" text="Correo:">
+                    <font>
+                        <Font name="Franklin Gothic Medium Italic" size="17.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblCorreoUsuario" layoutX="72.0" layoutY="69.0" text="Correo">
+                    <font>
+                        <Font name="Franklin Gothic Medium Italic" size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="10.0" layoutY="113.0" text="Rol:">
+                    <font>
+                        <Font name="System Italic" size="17.0" />
+                    </font>
+                </Label>
+                <Label fx:id="lblRolUsuario" layoutX="51.0" layoutY="113.0" text="Rol">
+                    <font>
+                        <Font name="System Italic" size="17.0" />
+                    </font>
+                </Label>
+                <!-- Ajuste del botón de Logout -->
+                <Button fx:id="btnCerrarSesion" layoutX="480.0" layoutY="10.0" mnemonicParsing="false" onAction="#cerrarSesion" prefHeight="40.0" prefWidth="90.0" style="-fx-background-color: #ff4d4d; -fx-text-fill: white; -fx-font-weight: bold;" text="Logout" />
+                <AnchorPane blendMode="GREEN" layoutY="186.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="213.0" prefWidth="650.0" style="-fx-background-color: #f9e79f;">
+                    <children>
+                        <Button fx:id="btnAdministrador" layoutX="14.0" layoutY="73.0" mnemonicParsing="false" onAction="#administradorView" prefHeight="68.0" prefWidth="143.0" text="Administrador">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font></Button>
+                        <Button fx:id="btnVentas" layoutX="249.0" layoutY="73.0" mnemonicParsing="false" onAction="#ventasView" prefHeight="68.0" prefWidth="143.0" text="Ventas">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font></Button>
+                        <Button fx:id="btnBodega" layoutX="483.0" layoutY="73.0" mnemonicParsing="false" onAction="#bodegaView" prefHeight="68.0" prefWidth="143.0" text="Bodega">
+                     <font>
+                        <Font name="SansSerif Regular" size="18.0" />
+                     </font></Button>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

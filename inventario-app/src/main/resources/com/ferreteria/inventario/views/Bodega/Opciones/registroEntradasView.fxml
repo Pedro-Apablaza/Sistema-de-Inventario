@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="522.0" prefWidth="837.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ferreteria.inventario.controllers.registroEntradaController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="522.0" prefWidth="756.0" style="-fx-background-color: ffffbf;" VBox.vgrow="ALWAYS">
+         <children>
+            <TableView fx:id="tblEntrada" layoutX="14.0" layoutY="49.0" prefHeight="459.0" prefWidth="812.0" style="-fx-border-color: black;">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="52.0" text="ID" />
+                <TableColumn fx:id="colNombre" prefWidth="154.0" text="Nombre del Producto" />
+                  <TableColumn fx:id="colCantidad" prefWidth="82.0" text="Cantidad" />
+                  <TableColumn fx:id="colUsuario" prefWidth="137.0" text="Usuario" />
+                  <TableColumn fx:id="colFecha" prefWidth="104.0" text="Fecha" />
+                  <TableColumn fx:id="colTipo" prefWidth="75.0" text="Tipo" />
+                  <TableColumn fx:id="colMotivo" prefWidth="206.0" text="Motivo" />
+              </columns>
+            </TableView>
+            <Label layoutX="290.0" layoutY="15.0" prefHeight="31.0" prefWidth="258.0" text="Registro Entradas" underline="true">
+               <font>
+                  <Font name="Lucida Console" size="25.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="30.0" layoutX="775.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/com/ferreteria/inventario/views/images/Agregar.png" />
+               </image>
+            </ImageView>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

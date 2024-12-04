@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" VBox.vgrow="ALWAYS" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ferreteria.inventario.controllers.facturaController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="469.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="488.0" text="-------------------------------------------------------------------------------------------------" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="489.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="487.0" text="Ferreteria La Llave Maestra" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="489.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="487.0" text="Dirección: 5970 Av.Rodelillo, Valparaío" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="489.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="486.0" text="RUT: 76.123.456-7 |  Tel: +56 9 9876 5432" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="489.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="486.0" text="Correo: Ferreterialallavemaestra@gmail.com" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="489.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="488.0" text="-------------------------------------------------------------------------------------------------">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="489.0">
+         <children>
+            <Label fx:id="lblTipo" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="88.0" text="\$tipo$" />
+            <Label fx:id="lblID" prefHeight="17.0" prefWidth="125.0" text="\$ID$" />
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="133.0" text="Fecha:  " />
+            <Label fx:id="lblFecha" prefHeight="17.0" prefWidth="125.0" text="\$Fecha$" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="489.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="488.0" text="-------------------------------------------------------------------------------------------------">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="489.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="45.0" text="Cliente:">
+               <HBox.margin>
+                  <Insets left="22.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="lblNombre" prefHeight="17.0" prefWidth="395.0" text="\$Nombre$" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="489.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="45.0" text="RUT">
+               <HBox.margin>
+                  <Insets left="22.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="lblRut" prefHeight="17.0" prefWidth="398.0" text="\$RUT$" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="489.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="45.0" text="Correo">
+               <HBox.margin>
+                  <Insets left="22.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="lblCorreo" prefHeight="17.0" prefWidth="391.0" text="\$Correo$" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="489.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="488.0" text="-------------------------------------------------------------------------------------------------">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefWidth="489.0" HBox.hgrow="ALWAYS">
+         <children>
+            <TableView fx:id="tblFactura" HBox.hgrow="ALWAYS">
+                  <columns>
+                     <TableColumn fx:id="colCantidad" prefWidth="118.0" text="Cantidad" />
+                     <TableColumn fx:id="colDescripcion" prefWidth="118.0" text="Descripción" />
+                     <TableColumn fx:id="colPrecio" prefWidth="112.0" text="Precio U." />
+                     <TableColumn fx:id="colTotal" prefWidth="120.0" text="Total" />
+                  </columns>
+                  <HBox.margin>
+                     <Insets left="10.0" right="10.0" />
+                  </HBox.margin>
+            </TableView>
+         </children>
+      </HBox>
+
+      <HBox alignment="CENTER_LEFT" prefHeight="20.0" prefWidth="489.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="488.0" text="-------------------------------------------------------------------------------------------------">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="489.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="290.0" text="SubTotal:">
+               <HBox.margin>
+                  <Insets left="22.0" />
+               </HBox.margin>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="86.0" />
+            <Label fx:id="lblSubtotal" contentDisplay="CENTER" prefHeight="17.0" prefWidth="175.0" text="\$Subtotal$" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="489.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="290.0" text="Impuesto:">
+               <HBox.margin>
+                  <Insets left="22.0" />
+               </HBox.margin>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="86.0" />
+            <Label fx:id="lblImpuesto" contentDisplay="CENTER" prefHeight="17.0" prefWidth="175.0" text="\$Impuesto$" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="489.0">
+         <children>
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="290.0" text="TOTAL:">
+               <HBox.margin>
+                  <Insets left="22.0" />
+               </HBox.margin>
+            </Label>
+            <Label prefHeight="17.0" prefWidth="86.0" />
+            <Label fx:id="lblTotal" contentDisplay="CENTER" prefHeight="17.0" prefWidth="175.0" text="\$TOTAL$" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" prefHeight="32.0" prefWidth="489.0">
+         <children>
+            <Label prefHeight="17.0" prefWidth="486.0" text="Gracias por su compra. Visitenos nuevamente.">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</VBox>

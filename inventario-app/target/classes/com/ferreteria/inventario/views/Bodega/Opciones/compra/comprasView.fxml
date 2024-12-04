@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" style="-fx-border-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ferreteria.inventario.controllers.comprasController1">
+  <children>
+    <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="829.0" prefWidth="1273.0" style="-fx-background-color: ffffbf;">
+         <children>
+            <AnchorPane layoutX="615.0" layoutY="14.0" prefHeight="123.0" prefWidth="646.0" style="-fx-border-color: black;">
+               <children>
+                  <Label layoutX="36.0" layoutY="17.0" text="Rut del proveedor" />
+                  <Label layoutX="36.0" layoutY="75.0" text="Dirección" />
+                  <Label layoutX="304.0" layoutY="17.0" text="Nombre" />
+                  <Label layoutX="304.0" layoutY="75.0" text="Correo" />
+                  <TextField fx:id="txtRutProveedor" layoutX="44.0" layoutY="34.0" prefHeight="25.0" prefWidth="166.0" />
+                  <TextField fx:id="txtNombreProveedor" layoutX="312.0" layoutY="34.0" prefHeight="25.0" prefWidth="166.0" />
+                  <TextField fx:id="txtCorreoProveedor" layoutX="312.0" layoutY="92.0" prefHeight="25.0" prefWidth="166.0" />
+                  <TextField fx:id="txtDireccionProveedor" layoutX="44.0" layoutY="92.0" prefHeight="25.0" prefWidth="166.0" />
+                  <Button fx:id="btnProveedor" layoutX="514.0" layoutY="49.0" mnemonicParsing="false" onAction="#abrirVentanaProveedor" prefHeight="53.0" prefWidth="99.0" text="Proveedor">
+                     <font>
+                        <Font name="SansSerif Regular" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="615.0" layoutY="142.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="572.0" prefWidth="646.0" style="-fx-border-color: black;">
+               <children>
+                  <TableView fx:id="tblCarro" layoutX="2.0" layoutY="6.0" prefHeight="563.0" prefWidth="640.0">
+                    <columns>
+                      <TableColumn fx:id="ColCarroId" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="ColCarroNombre" prefWidth="190.0" text="Nombre" />
+                        <TableColumn fx:id="ColCarroCantidad" prefWidth="63.0" text="Cantidad" />
+                        <TableColumn fx:id="ColCarroCategoria" prefWidth="168.0" text="Categoría" />
+                        <TableColumn fx:id="ColCarroPrecio" prefWidth="148.0" text="Precio" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="613.0" layoutY="720.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="101.0" prefWidth="646.0" style="-fx-background-color: f9e79f; -fx-border-color: black;">
+               <children>
+                  <Label layoutX="14.0" layoutY="34.0" text="Total En Pesos:">
+                     <font>
+                        <Font name="NSimSun" size="25.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnComprar" layoutX="474.0" layoutY="7.0" mnemonicParsing="false" onAction="#Comprar" prefHeight="89.0" prefWidth="166.0" style="-fx-border-color: black;" text="Comprar">
+                     <font>
+                        <Font name="Cambria" size="31.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="lblTotal" layoutX="215.0" layoutY="21.0" prefHeight="53.0" prefWidth="258.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="13.0" prefHeight="804.0" prefWidth="271.0" style="-fx-background-color: f9e79f; -fx-border-color: black;">
+               <children>
+                  <ScrollPane layoutX="2.0" layoutY="2.0" prefHeight="800.0" prefWidth="267.0" style="-fx-background-color: ffffbf; -fx-border-color: black;">
+                     <content>
+                        <FlowPane fx:id="fpnCategoria" prefHeight="880.0" prefWidth="268.0" style="-fx-background-color: ffffbf; -fx-border-color: black;" />
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="290.0" layoutY="329.0" prefHeight="492.0" prefWidth="317.0" style="-fx-background-color: f9e79f; -fx-border-color: black;">
+               <children>
+                  <TableView fx:id="tblCompras" layoutX="5.0" layoutY="5.0" prefHeight="484.0" prefWidth="307.0">
+                     <columns>
+                        <TableColumn fx:id="ColId" prefWidth="62.0" text="ID" />
+                        <TableColumn fx:id="ColNombre" prefWidth="155.0" text="Nombre" />
+                        <TableColumn fx:id="colCantidad" prefWidth="88.0" text="Cantidad" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="290.0" layoutY="14.0" prefHeight="183.0" prefWidth="317.0" style="-fx-background-color: f9e79f; -fx-border-color: black;">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="ID:">
+                     <font>
+                        <Font name="NSimSun" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="68.0" text="Nombre:">
+                     <font>
+                        <Font name="NSimSun" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="14.0" layoutY="128.0" text="Precio:">
+                     <font>
+                        <Font name="NSimSun" size="23.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtID" editable="false" layoutX="118.0" layoutY="14.0" prefHeight="25.0" prefWidth="173.0" />
+                  <TextField fx:id="txtNombre" editable="false" layoutX="118.0" layoutY="68.0" prefHeight="25.0" prefWidth="173.0" />
+                  <TextField fx:id="txtPrecio" editable="false" layoutX="118.0" layoutY="128.0" prefHeight="25.0" prefWidth="128.0" />
+                  <Label layoutX="252.0" layoutY="124.0" text="CLP">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Button fx:id="btnQuitarCarro" layoutX="465.0" layoutY="269.0" mnemonicParsing="false" onAction="#quitarCarro" prefHeight="48.0" prefWidth="112.0" style="-fx-border-color: black;" text="Quitar del Carro" />
+            <Button fx:id="btnAgregarCarro" layoutX="465.0" layoutY="205.0" mnemonicParsing="false" onAction="#agregarCarro" prefHeight="48.0" prefWidth="112.0" style="-fx-border-color: black;" text="Agregar al Carro" />
+            <Button fx:id="btnLimpiarCarro" layoutX="314.0" layoutY="269.0" mnemonicParsing="false" onAction="#limpiarCarro" prefHeight="48.0" prefWidth="112.0" style="-fx-border-color: black;" text="Limpiar Carro" />
+            <Button fx:id="btnFiltro" layoutX="314.0" layoutY="205.0" mnemonicParsing="false" onAction="#quitarFiltro" prefHeight="48.0" prefWidth="112.0" style="-fx-border-color: black;" text="Quitar filtro">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font></Button>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

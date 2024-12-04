@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="155.0" prefWidth="414.0" style="-fx-background-color: #ffffbf;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ferreteria.inventario.controllers.ventasController">
+   <children>
+      <GridPane alignment="CENTER_RIGHT" prefHeight="149.0" prefWidth="380.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="343.0" minWidth="10.0" prefWidth="183.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="386.0" minWidth="10.0" prefWidth="335.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="112.0" minHeight="10.0" prefHeight="112.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="101.0" minHeight="10.0" prefHeight="55.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="btnCancelar" mnemonicParsing="false" onAction="#cancelarCategoria" text="CANCELAR" GridPane.rowIndex="1" />
+            <Button fx:id="btnAgregar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#agregarCategoria" text="NUEVO" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="130.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Serif Regular" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblNomCategoria" text="Cantidad a vender:" GridPane.halignment="RIGHT">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCantidadVender" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="30.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

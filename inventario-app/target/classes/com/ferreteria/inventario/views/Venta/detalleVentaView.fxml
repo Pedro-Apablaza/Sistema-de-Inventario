@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ferreteria.inventario.controllers.detalleVentaController">
+   <children>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0">
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="425.0" prefWidth="923.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <GridPane alignment="CENTER" prefHeight="433.0" prefWidth="659.0" style="-fx-background-color: #f9e79f;" HBox.hgrow="ALWAYS">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="137.0" minHeight="0.0" prefHeight="39.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="312.0" minHeight="10.0" prefHeight="298.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="92.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" text="VENTAS REALIZADAS" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TableView fx:id="tblVentasRealizadas" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn fx:id="ColVentaFecha" prefWidth="141.0" text="Fecha de Venta" />
+                                    <TableColumn fx:id="ColVentaTotal" prefWidth="125.0" text="Total de Venta" />
+                                    <TableColumn fx:id="ColVentaCliente" prefWidth="168.0" text="Cliente" />
+                                    <TableColumn fx:id="ColVentaRut" prefWidth="102.0" text="Rut de Cliente" />
+                                    <TableColumn fx:id="ColVentaVendedor" prefWidth="193.0" text="Vendedor" />
+                                </columns>
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </TableView>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f9e79f;" GridPane.rowIndex="2">
+                                 <children>
+                                    <Label layoutX="14.0" layoutY="14.0" text="Cliente: ">
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="48.0" text="Vendedor: ">
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="392.0" layoutY="15.0" text="Total: ">
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="392.0" layoutY="49.0" text="Fecha: ">
+                                       <font>
+                                          <Font name="System Bold Italic" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="txtCliente" editable="false" layoutX="88.0" layoutY="11.0" />
+                                    <TextField fx:id="txtVendedor" editable="false" layoutX="88.0" layoutY="45.0" />
+                                    <TextField fx:id="txtPrecioTotal" editable="false" layoutX="445.0" layoutY="11.0" />
+                                    <TextField fx:id="txtFecha" editable="false" layoutX="445.0" layoutY="45.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </GridPane>
+                        <GridPane alignment="CENTER" style="-fx-background-color: #f9e79f;" HBox.hgrow="ALWAYS">
+                          <columnConstraints>
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="170.0" valignment="CENTER" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="139.0" minHeight="10.0" prefHeight="99.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="232.0" minHeight="10.0" prefHeight="149.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="135.0" text="TOTAL DE VENTAS">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets top="90.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label fx:id="precio_total" text="\$$$" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="15.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </HBox>
+                  <VBox VBox.vgrow="ALWAYS">
+                     <children>
+                        <GridPane style="-fx-background-color: #f9e79f;" VBox.vgrow="ALWAYS">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="174.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="322.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f9e79f;">
+                                 <children>
+                                    <Label layoutX="379.0" layoutY="12.0" text="DETALLE DE VENTA">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <TableView fx:id="tblDetalleVenta" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.rowIndex="1">
+                                <columns>
+                                  <TableColumn fx:id="ColDetalleID" prefWidth="172.0" text="ID Producto" />
+                                  <TableColumn fx:id="ColDetalleProducto" prefWidth="172.0" text="Nombre Producto" />
+                                    <TableColumn fx:id="ColDetallePrecio" prefWidth="172.0" text="Precio Unitario" />
+                                    <TableColumn fx:id="ColDetalleCantidad" prefWidth="172.0" text="Cantidad" />
+                                    <TableColumn fx:id="ColDetalleTotal" prefWidth="173.0" text="Precio_Total" />
+                                </columns>
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </TableView>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </VBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+         <left>
+            <VBox prefHeight="800.0" prefWidth="277.0" style="-fx-background-color: #ffffbf;">
+               <children>
+                  <GridPane VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                      <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="355.0" minHeight="10.0" prefHeight="259.0" vgrow="ALWAYS" />
+                        <RowConstraints maxHeight="256.0" minHeight="10.0" prefHeight="28.0" vgrow="ALWAYS" />
+                        <RowConstraints maxHeight="256.0" minHeight="10.0" prefHeight="47.0" valignment="TOP" vgrow="ALWAYS" />
+                        <RowConstraints maxHeight="151.0" minHeight="0.0" prefHeight="18.0" vgrow="ALWAYS" />
+                      <RowConstraints maxHeight="201.0" minHeight="10.0" prefHeight="40.0" valignment="TOP" vgrow="ALWAYS" />
+                      <RowConstraints maxHeight="357.0" minHeight="0.0" prefHeight="27.0" vgrow="ALWAYS" />
+                      <RowConstraints maxHeight="305.0" minHeight="0.0" prefHeight="182.0" valignment="TOP" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="308.0" minHeight="10.0" prefHeight="80.0" vgrow="ALWAYS" />
+                        <RowConstraints maxHeight="281.0" minHeight="10.0" prefHeight="82.0" vgrow="ALWAYS" />
+                    </rowConstraints>
+                     <padding>
+                        <Insets left="3.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <DatePicker fx:id="dpFechaFin" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin>
+                        </DatePicker>
+                        <DatePicker fx:id="dpFechaInicio" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets top="10.0" />
+                           </GridPane.margin>
+                        </DatePicker>
+                        <Label text="Fecha de inicio" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Label text="Fecha de fin" GridPane.rowIndex="3">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="btnFiltrar" mnemonicParsing="false" onAction="#filtrarPorFechas" prefHeight="36.0" prefWidth="165.0" text="Filtrar" GridPane.rowIndex="7" />
+                        <Button onAction="#quitarFiltro" fx:id="btnQuitarFiltro" mnemonicParsing="false" prefHeight="36.0" prefWidth="165.0" text="Quitar filtros" GridPane.rowIndex="8" />
+                        <ImageView fitHeight="174.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/LogoEmpresaSinFondo-transformed.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </BorderPane.margin>
+            </VBox>
+         </left>
+      </BorderPane>
+   </children>
+</VBox>
